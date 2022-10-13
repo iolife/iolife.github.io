@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>My test page</title>
-  </head>
-  <body>
-    <div id='jnkc'></div>
-    <script>
-    
-    setInterval("jnkc.innerHTML=(new Date().toLocaleString('chinese',{ hour12: false })).replaceAll('/','-').replace(',','');",1000);
-    </script>
-    <img src="1.png">
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>My test page</title>
+  <style>
+    #jnkc {
+      width: 100%;
+      height: 100%;
+      min-height: 970px;
+    }
+
+    #jnkc2 {
+      width:auto;
+      height: 1000px;
+      text-align: center;
+      font-size: 28px;      
+    }
+  </style>
+</head>
+
+<body>
+  <div id='jnkc' style="background-image: url(1.png);">
+    <div2 id='jnkc2' style="content: center;"></div2>
+  </div>
+
+  <script>
+    setInterval("jnkc2.innerHTML=(new Date().toLocaleString('chinese',{ hour12: false })).replaceAll('/','-').replace(',','');", 1000);
+  </script>
+</body>
+
 </html>
